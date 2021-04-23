@@ -1,17 +1,14 @@
 import React from 'react';
-import Footer from '../components/footer';
-import Header from '../components/header';
+import Layout from '../components/layout';
 
 const ContactPage = () => {
   return (
-    <div>
-      <Header />
+    <Layout>
       <h1>Contact Me</h1>
       <p>
-        The best way to reach me is <a href="http://google.com" target="_blank">marc@mail.com</a>
+        The best way to reach me is <a href="http://google.com" target="_blank" rel="noreferrer">marc@mail.com</a>
       </p>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 
