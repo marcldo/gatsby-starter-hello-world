@@ -17,15 +17,15 @@ const BlogPage = () => {
     }
   }
   `);
-  const posts = data.allMarkdownRemark.edges
+
   return (
     <Layout>
       <h1>Blog</h1>
       <ol>
-        {posts.map((post) => (
-          <li key={post.node.frontmatter.title}>
-            <h2>{post.node.frontmatter.title}</h2>
-            <p>{post.node.frontmatter.date}</p>
+        {data.allMarkdownRemark.edges.map((edge) => (
+          <li key={edge.node.frontmatter.title}>
+            <h2>{edge.node.frontmatter.title}</h2>
+            <p>{edge.node.frontmatter.date}</p>
           </li>
         ))}
       </ol>
